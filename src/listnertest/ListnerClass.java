@@ -121,12 +121,14 @@ public class ListnerClass implements WebDriverEventListener {
 	@Override
 	public void beforeScript(String script, WebDriver driver) {
 		// TODO Auto-generated method stub
+		System.out.println("before running scripts to url");
 		
 	}
 
 	@Override
 	public void afterScript(String script, WebDriver driver) {
 		// TODO Auto-generated method stub
+		System.out.println("after running script to url");
 		
 	}
 

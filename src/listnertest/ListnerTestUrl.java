@@ -2,6 +2,7 @@ package listnertest;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -28,6 +29,8 @@ public class ListnerTestUrl {
         eventRecorder.navigate().to("https://www.google.com");
             
         driver.manage().window().maximize();
+        JavascriptExecutor js = (JavascriptExecutor) eventRecorder;
+        js.executeScript("alert('hi')");
         driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
     }
 
